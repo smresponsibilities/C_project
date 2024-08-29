@@ -1,6 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <math.h>
 
+#define MOD_VALUE 46106600
 
- char sortedDictionary[][6] = {
+// Function to calculate the power of a number
+unsigned long long power(int base, int exp) {
+    unsigned long long result = 1;
+    for (int i = 0; i < exp; i++) {
+        result *= base;
+    }
+    return result;
+}
+
+int main() {
+    // Example array of strings
+    const char *a[] = {
     "aalii",
     "aalst",
     "aalto",
@@ -9083,5 +9099,37 @@
 
 
 
+    int a_size = sizeof(a) / sizeof(a[0]);
+    printf("%d\n",a_size);
+
+    // Array to store the results
+    unsigned long long b[a_size];
+    unsigned long long sum[7296];
+    int c=0;
+    for (int i = 0; i < a_size; i++) {
+        unsigned long long d = 0;
+        int len = strlen(a[i]);
+        for (int j = 0; j < len; j++) {
+            d += (a[i][j] * power(26, j)) % MOD_VALUE;
+        }
+        b[i] = d % MOD_VALUE;
+        // sum[b[i]]=1;
+
+        if (b[i]>c)c=b[i];
+    }
+    int e=0;
+    for (long long i = 0; i <= 7296; i++) {
+        if (sum[i]==1)e++;
+    }
+
+    printf("%d\n",e);
 
 
+    // Print the results
+    // for (int i = 0; i < a_size; i++) {
+    //     printf("%llu\n", b[i]);
+    // }
+    printf("%d\n",c);
+
+    return 0;
+}

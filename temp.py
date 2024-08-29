@@ -1,7 +1,4 @@
-
-
- char sortedDictionary[][6] = {
-    "aalii",
+a=["aalii",
     "aalst",
     "aalto",
     "aarau",
@@ -9079,9 +9076,23 @@
     "zygal",
     "zygon",
     
-    };
 
+]
+import collections as Collections
+b=[]
+e=[]
+for i in a:
 
+    d=0
+    for j in range(len(i)):
+        d+=(ord(i[j])*(26**(j)))%46106600
+    b.append(d%46106600)
+    e.append(str((ord(i[0])+ord(i[1]))%16)+str((ord(i[-2])+ord(i[-1]))%16))
 
-
-
+print(len(set(e)))
+print(len(bin(9077))) 
+print((max(b)))
+print(len(bin(min(b))))
+print(len(bin(max(b))))
+c=Collections.Counter(b)
+print(len(c))
