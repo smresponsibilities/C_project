@@ -1,1 +1,0 @@
-    # print(sum([ord(j) for j in i]))
