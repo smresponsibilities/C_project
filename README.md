@@ -63,9 +63,9 @@ Insert gif or link to demo
 
 ## Roadmap
 
-- Additional browser support
+- Transition from terminal to gui
 
-- Add more integrations
+- Add more words and slangs
 
 
 ## Usage/Examples

@@ -1,5 +1,5 @@
 
-#include "temp.h"
+#include "hash.h"
 #define MOD_VALUE 46106600
 
 // Function to calculate the power of a number
