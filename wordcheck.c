@@ -1,12 +1,15 @@
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
+#include<ctype.h>
+// #include "capitalize.h"
 
 int wordCheck(char *word, char *guess) {
-    if (strlen(word) != strlen(guess)) {
+    if (((guess) == NULL) || (strlen(word) != strlen(guess))) {
         return 0;
     }
-    for (int i = 0; i < 5 ; i++) {
-        if (word[i] != guess[i]) {
+    for (int i = 0; i < 5; i++) {
+        if (tolower((unsigned char)word[i]) != tolower((unsigned char)guess[i])) {
             return 1;
         }
     }
@@ -16,11 +19,13 @@ int wordCheck(char *word, char *guess) {
 
 
 
-int main() {
-    printf("%d\n", wordCheck("hello", "hello"));
-    printf("%d\n", wordCheck("hello", "hella"));
-    printf("%d\n", wordCheck("hello", "hellaqqq"));;
-
+// int main() {
+//     printf("%d\n", wordCheck("hEllo", "hello"));
+//     printf("%d\n", wordCheck("hello", "hellA"));
+//     printf("%d\n", wordCheck("hello", "hellaqqq"));
+//     printf("%d\n", wordCheck("hello", "\0"));
+//     printf("%d\n", wordCheck("hello", ""));
+//     printf("%d\n", wordCheck("hello", NULL));
     
-    return 0;
-}
+//     return 0;
+// }
