@@ -1,7 +1,10 @@
 #ifndef RANDOMINDEX_H
 #define RANDOMINDEX_H
 
-// Function declaration
+#include <stdlib.h>
+#include <time.h>
+
+// Function declaration  
 int randomIndex();
 
-#endif // RANDOMINDEX_H
+#endif 
