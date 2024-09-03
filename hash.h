@@ -1,5 +1,6 @@
-#ifndef HASH_H
-#define HASH_H
+#ifndef HASH_H  //guards
+#define HASH_H  //guards
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -7,9 +8,9 @@
 #include <ctype.h>
 #include <stdbool.h>
 
-// Declare the array
-static  bool dd [6999999];
-static  char* a[9077]= {
+// declared global arrays 
+static  bool isAvailable [6999999];
+static  char* wordList[9077]= {
     "aalii",
     "aalst",
     "aalto",
@@ -9090,7 +9091,10 @@ static  char* a[9077]= {
     
     };
 
-   
+
+// interfaces 
 unsigned long long power(int base, int exp);
-void hashfunction(char** a, bool dd[]);
-#endif // TEMP_H
+void hashfunction(char** wordList, bool isAvailable[]);
+
+
+#endif 
