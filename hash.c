@@ -41,7 +41,7 @@ int hashfunction2( char* word) {
     unsigned long long midResult = 0;
     int len = strlen(word);
     for (int j = 0; j < len; j++) {
-        midResult += (word[j] * power(26, j)) % FIRST_HASH;
+        midResult += (tolower(word[j]) * power(26, j)) % FIRST_HASH;
         // major hash function tailored by trial and error
     }
     

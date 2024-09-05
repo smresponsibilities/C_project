@@ -24,14 +24,22 @@ Go to the project directory
   cd Wordle
 ```
 
-Running the project 
+Running the project
+
+For linux (as i have already given a prebuilt file)
 
 ```bash {"id":"01J6WZ5476B3T2H75SWH9QRR4R"}
-  ./wordle
+  ./wordle  
 ```
+
+For windows, both commands are individually capable enough to run the program
 
 ```bash {"id":"01J71YET5SHQ310X2ZJ5YMQYH0"}
  wordle.exe
+```
+
+```bash {"id":"01J727AW1WJVX36T5N5GFD2B1V"}
+.\wordle
 ```
 
 ## Features
@@ -74,9 +82,12 @@ Insert gif or link to demo
 
 - Transition from terminal to gui
 - Add more words and slangs
-- Using socket 
+- Using socket
 
 ## Screenshots
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
+## Author
+
+- [@smresponsibilities](https://www.github.com/smresponsibilities)

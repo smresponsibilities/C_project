@@ -51,7 +51,7 @@ int main() {
 
         // Check if the input length is exactly 5 characters
         if (strlen(input) != 5) {
-                        for (int j = 0; j <= i; j++) {
+                        for (int j = 0; j <= i-1; j++) {
                 printColoredWord(fiveLetterStrings[j], colors[j]);
             }
 
@@ -61,7 +61,7 @@ int main() {
         }
 
         if  (isAvailable[hashfunction2(input)]==0){
-            for (int j = 0; j <= i; j++) {
+            for (int j = 0; j <= i-1; j++) {
                 printColoredWord(fiveLetterStrings[j], colors[j]);
             }
 
