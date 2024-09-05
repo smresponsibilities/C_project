@@ -7,6 +7,9 @@
 #include<ctype.h>
 #include "hash.h"
 
+
+
+
 int main(){
 
 
@@ -14,17 +17,36 @@ int main(){
     int result = 0;
     char input[10000];
     char * wordToGuess = wordList[randomIndex()];
+    char fiveLetterStrings[5][6];
+    int i = 0;
 
 
     do {
         printf("Enter a word: ");
         scanf("%s", input);
-        printf("%d\n", strlen(input));
-        printf("%d\n", strlen(wordToGuess));
-        printf("%s\n", wordToGuess);
+        // printf("%d\n", strlen(input));
+        // printf("%d\n", strlen(wordToGuess));
+        // printf("%s\n", wordToGuess);
         result = wordCheck(wordToGuess, input);
-        printf("%d\n", result);
-    } while (result != 2);
+        if (result != 0) {
+
+            for (int k = 0; input[k] != '\0'; k++) {
+                input[k] = toupper(input[k]);
+            }
+            
+            strcpy(fiveLetterStrings[i], input);
+            i++;
+        }
+
+    for (int j = 0; j < i; j++) {
+        printf("%s\n", fiveLetterStrings[j]);
+    }
+    if (i == 5) {
+        break;
+    }
+    printf("\n");
+
+    } while (result != 2 && i < 5);
 
     return 0;
 }
