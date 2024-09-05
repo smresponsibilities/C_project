@@ -2,9 +2,9 @@
 
 A brief description of what this project does and who it's for
 
-## Installation
+## Recompiling the program
 
-Install my-project with npm
+The below command will make a new executable
 
 ```bash {"id":"01J6WZ5475C5VKJF1Y4H4HQVXC"}
   npm install my-project
@@ -22,7 +22,7 @@ Clone the project
 Go to the project directory
 
 ```bash {"id":"01J6WZ5476B3T2H75SWBA0ZHDY"}
-  cd Wordle-main
+  cd Wordle
 ```
 
 Running the project 
@@ -37,19 +37,23 @@ Running the project
 
 ## Features
 
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
+- A single word for the whole day
+- Implemented a pseudo hash technique with no collisions
+- Very modular
 - Cross platform
 
 ## Running Tests
 
 To run tests, go to the test directory on your machine
 
-To run the script on windows , run the below bat file or the next commands
+```bash {"id":"01J71Z0343QPEB3AYS0HMT7J3G"}
+ cd test
+```
+
+To run the script on Windows , either run the below bat file or the next commands
 
 ```bash {"id":"01J6WZ5476B3T2H75SWKG4J3EM"}
-.\test.bat 
+./test.bat 
 ```
 
 ```bash {"id":"01J6WZA2VB89ZTG611BNCZF8FD"}
@@ -71,16 +75,7 @@ Insert gif or link to demo
 
 - Transition from terminal to gui
 - Add more words and slangs
-
-## Usage/Examples
-
-```javascript {"id":"01J6WZ5476B3T2H75SWM3NMPVY"}
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
-```
+- Using socket 
 
 ## Screenshots
 
