@@ -1,4 +1,4 @@
-# Wordle 
+# Wordle
 
 A brief description of what this project does and who it's for
 
@@ -16,25 +16,23 @@ Install my-project with npm
 Clone the project
 
 ```bash {"id":"01J6WZ5476B3T2H75SW9AQ2Z83"}
-  git clone https://link-to-project
+  git clone https://github.com/smresponsibilities/Wordle
 ```
 
 Go to the project directory
 
 ```bash {"id":"01J6WZ5476B3T2H75SWBA0ZHDY"}
-  cd my-project
+  cd Wordle-main
 ```
 
-Install dependencies
-
-```bash {"id":"01J6WZ5476B3T2H75SWEHS73JP"}
-  npm install
-```
-
-Start the server
+Running the project 
 
 ```bash {"id":"01J6WZ5476B3T2H75SWH9QRR4R"}
-  npm run start
+  ./wordle
+```
+
+```bash {"id":"01J71YET5SHQ310X2ZJ5YMQYH0"}
+ wordle.exe
 ```
 
 ## Features

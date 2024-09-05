@@ -9095,6 +9095,7 @@ static  char* wordList[9077]= {
 // interfaces 
 unsigned long long power(int base, int exp);
 void hashfunction(char** wordList, bool isAvailable[]);
+int hashfunction2(char* word);  
 
 
 #endif 
