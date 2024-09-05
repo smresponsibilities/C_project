@@ -1,13 +1,15 @@
 #include<stdio.h>
 #include"randomindex.h"
 #include<assert.h>
+#include"testrandom.h"
 
 //gcc -I.. ../hash.c testhash.c -o testhash 
 
-int main()
+
+void testRandom()
 {
     assert(randomIndex()==randomIndex());
-    printf("The hash functionality is working perfectly\n");
+    printf("The random functionality is working perfectly\n");
 
     
 }

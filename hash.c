@@ -37,6 +37,24 @@ void hashfunction(char** wordList, bool isAvailable[]) {
 }
 
 
+int hashfunction2( char* word) {
+    unsigned long long midResult = 0;
+    int len = strlen(word);
+    for (int j = 0; j < len; j++) {
+        midResult += (word[j] * power(26, j)) % FIRST_HASH;
+        // major hash function tailored by trial and error
+    }
+    
+    // doing modulus to decrease the size of the hash value
+    unsigned long long hashValue = midResult % FIRST_HASH;
+
+    // making the boolean value true as there is no collision
+return (hashValue % SECOND_HASH);
+
+
+}
+
+
 
 
 
