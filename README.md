@@ -2,13 +2,12 @@
 
 A brief description of what this project does and who it's for
 
-## Recompiling the program
+## Building the program
 
-The below command will make a new executable
+The below command will make a new executable/equivalent
 
 ```bash {"id":"01J6WZ5475C5VKJF1Y4H4HQVXC"}
-  npm install my-project
-  cd my-project
+gcc wordle.c color.c randomindex.c wordcheck.c hash.c -o wordle 
 ```
 
 ## Run Locally
