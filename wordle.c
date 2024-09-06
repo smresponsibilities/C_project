@@ -1,12 +1,12 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include"randomindex.h"
-#include"wordcheck.h"
+#include"include/randomindex.h"
+#include"include/wordcheck.h"
 #include<string.h>
 #include<ctype.h>
-#include "hash.h"
-#include "color.h"
+#include "include/hash.h"
+#include "include/color.h"
 
 
 #define COLOR_GREEN "\033[1;32m"
@@ -51,7 +51,7 @@ int main() {
 
         // Check if the input length is exactly 5 characters
         if (strlen(input) != 5) {
-                        for (int j = 0; j <= i; j++) {
+                        for (int j = 0; j <= i-1; j++) {
                 printColoredWord(fiveLetterStrings[j], colors[j]);
             }
 
@@ -61,7 +61,7 @@ int main() {
         }
 
         if  (isAvailable[hashfunction2(input)]==0){
-            for (int j = 0; j <= i; j++) {
+            for (int j = 0; j <= i-1; j++) {
                 printColoredWord(fiveLetterStrings[j], colors[j]);
             }
 

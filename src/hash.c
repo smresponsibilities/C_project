@@ -1,7 +1,7 @@
 
 #define FIRST_HASH 46106600
 #define SECOND_HASH 6999999
-#include "hash.h"
+#include "../include/hash.h"
 
 // simple function to calculate the power of a number
 unsigned long long power(int base, int exp) {
@@ -41,7 +41,7 @@ int hashfunction2( char* word) {
     unsigned long long midResult = 0;
     int len = strlen(word);
     for (int j = 0; j < len; j++) {
-        midResult += (word[j] * power(26, j)) % FIRST_HASH;
+        midResult += (tolower(word[j]) * power(26, j)) % FIRST_HASH;
         // major hash function tailored by trial and error
     }
     

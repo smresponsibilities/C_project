@@ -1,5 +1,5 @@
 
-#include "randomindex.h"
+#include "../include/randomindex.h"
 
 int randomIndex(){
 
