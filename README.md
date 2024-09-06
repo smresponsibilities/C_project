@@ -114,7 +114,7 @@ chmod +x wordle.sh && ./wordle.sh
 
 ## Demo
 
-![alt text](/images/GIFMaker_me.gifGIFMaker_me.gif)
+![alt text](/images/GIFMaker_me.gif)
 
 ## Roadmap
 
