@@ -23,40 +23,60 @@ int main() {
     char wordToGuess[6];
     char *randomWord = wordList[randomIndex()];
 
-    // Convert the random word to uppercase and assign to wordToGuess
+
     for (int i = 0; i < 5; i++) {
         wordToGuess[i] = toupper(randomWord[i]);
     }
-    wordToGuess[5] = '\0'; // Null-terminate the string
+    wordToGuess[5] = '\0';
 
-    printf("Word to guess: %s\n", wordToGuess);
+
     char input[1000];
     char fiveLetterStrings[6][6];
     char colors[6][6];
-    char alphabetColors[26] = {0}; // Initialize all to 0 (no color)
+    char alphabetColors[26] = {0};
     int result;
     int i = 0;
+
     hashfunction(wordList, isAvailable);
 
+    printf("Welcome to Wordle!\n");
+    printf("About Wordle, it is a word guessing game. There is a single word to guess for the whole day.\n");
+    printf("You have 6 tries to guess a 5 letter word. We also provide you the hints to make it easier for you to guess the word.\n");  
+    printf("The hints are as follows: \n");
+    printf(COLOR_GREEN "Green" COLOR_RESET ": The letter is present in the word and is in the correct position." "\n");
+    printf(COLOR_YELLOW "Yellow" COLOR_RESET": The letter is present in the word but is not in the correct position.\n");
+    printf(COLOR_RED "Red" COLOR_RESET": The letter is not present in the word.\n");
+    printf("Also to make it more easier for you, we will also color the characters of alphabets you have used.\n");
+
+
+    printf("\n");
+
     do {
-        printf("Enter a word: ");
+        printf("Enter a 5 letter word: ");
 
         if (fgets(input, sizeof(input), stdin) == NULL) {
-            printf("Error reading input.\n");
+            printf("Error while getting input.\n");
             continue;
         }
 
-        // Remove newline character if present
+
         input[strcspn(input, "\n")] = '\0';
 
-        // Check if the input length is exactly 5 characters
+        printf("\n");
+
+
         if (strlen(input) != 5) {
-                        for (int j = 0; j <= i-1; j++) {
+            for (int j = 0; j <= i-1; j++) {
                 printColoredWord(fiveLetterStrings[j], colors[j]);
             }
+            printf("Number of tries still left: %d\n", 5-i);
+            printf("\n");
 
+            
+            printf("Please enter an appropriate word containing 5 letters.\n");
+            printf("\n");
             printAtoz(alphabetColors);
-            printf("Please enter a 5-letter word.\n");
+            printf("\n");
             continue;
         }
 
@@ -65,43 +85,50 @@ int main() {
                 printColoredWord(fiveLetterStrings[j], colors[j]);
             }
 
+            
+            printf("Number of tries still left: %d\n", 5-i);
+            printf("\n");
+            printf("Word is not present in our dictionary.\n");
+            printf("\n");
             printAtoz(alphabetColors);
-
-            printf("Word not in the dictionary\n");
+            printf("\n");
+            
             continue;
         }
 
         result = wordCheck(wordToGuess, input);
-        printf("Result: %d\n", result);
+
         
 
         if (result != 0) {
             for (int k = 0; input[k] != '\0'; k++) {
                 input[k] = toupper(input[k]);
             }
-            printf("Result: %d\n", result);
+            printf("Number of tries left: %d\n", 5-i);
+            printf("\n");
 
             strcpy(fiveLetterStrings[i], input);
             fiveLetterStrings[i][5] = '\0'; // Null-terminate the string
 
-             wordColoring(wordToGuess, fiveLetterStrings[i], colors[i]);
+            wordColoring(wordToGuess, fiveLetterStrings[i], colors[i]);
             updateAtozcolors(fiveLetterStrings[i], colors[i], alphabetColors);
 
-            // Print all previous guesses with colors
+
             for (int j = 0; j <= i; j++) {
                 printColoredWord(fiveLetterStrings[j], colors[j]);
             }
 
-            // Print the alphabet with colors
+            printf("\n");
             printAtoz(alphabetColors);
 
             i++;
             if(result==2){
                 printf("Congratulations! You have guessed the word.\n");
                 break;
-            } // Increment i after processing the current guess
+            } 
 
             if (i == 6) {
+                printf("You have unfornately run out of tries. Maybe play again to guess the word.\n", wordToGuess);
                 break;
             }
         }
