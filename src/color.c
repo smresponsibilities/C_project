@@ -1,18 +1,18 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include"randomindex.h"
-#include"wordcheck.h"
+#include"../include/randomindex.h"
+#include"../include/wordcheck.h"
 #include<string.h>
 #include<ctype.h>
-#include "hash.h"
-#include "color.h"
+#include "../include/hash.h"
+#include "../include/color.h"
 
 
 #define COLOR_GREEN "\033[1;32m"
 #define COLOR_YELLOW "\033[1;33m"
 #define COLOR_RED "\033[1;31m"
-#define COLOR_RESET "\033[0m"
+#define COLOR_NEUTRAL "\033[0m"
 
 void  wordColoring( char *wordToGuess, char *input, char colors[]) {
     int letterCount[26] = {0};
@@ -47,11 +47,11 @@ void  wordColoring( char *wordToGuess, char *input, char colors[]) {
 void printColoredWord( char *guess, char *colors) {
     for (int i = 0; i < 5; i++) {
         if (colors[i] == 'G') {
-            printf(COLOR_GREEN "%c" COLOR_RESET, guess[i]); // Green
+            printf(COLOR_GREEN "%c" COLOR_NEUTRAL, guess[i]); // Green
         } else if (colors[i] == 'Y') {
-            printf(COLOR_YELLOW "%c" COLOR_RESET, guess[i]); // Yellow
+            printf(COLOR_YELLOW "%c" COLOR_NEUTRAL, guess[i]); // Yellow
         } else {
-            printf(COLOR_RED "%c" COLOR_RESET, guess[i]); // Red
+            printf(COLOR_RED "%c" COLOR_NEUTRAL, guess[i]); // Red
         }
     }
     printf("\n");
@@ -75,11 +75,11 @@ void printAtoz( char alphabetColors[]) {
     for (char letter = 'A'; letter <= 'Z'; letter++) {
         int index = letter - 'A';
         if (alphabetColors[index] == 'G') {
-            printf(COLOR_GREEN "%c" COLOR_RESET " ", letter); // Green
+            printf(COLOR_GREEN "%c" COLOR_NEUTRAL " ", letter); // Green
         } else if (alphabetColors[index] == 'Y') {
-            printf(COLOR_YELLOW "%c" COLOR_RESET " ", letter); // Yellow
+            printf(COLOR_YELLOW "%c" COLOR_NEUTRAL " ", letter); // Yellow
         } else if (alphabetColors[index] == 'R') {
-            printf(COLOR_RED "%c" COLOR_RESET " ", letter); // Red
+            printf(COLOR_RED "%c" COLOR_NEUTRAL " ", letter); // Red
         } else {
             printf("%c ", letter);
         }

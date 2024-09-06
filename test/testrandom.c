@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include"randomindex.h"
+#include"../include/randomindex.h"
 #include<assert.h>
 #include"testrandom.h"
 

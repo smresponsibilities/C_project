@@ -1,12 +1,12 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include"randomindex.h"
-#include"wordcheck.h"
+#include"include/randomindex.h"
+#include"include/wordcheck.h"
 #include<string.h>
 #include<ctype.h>
-#include "hash.h"
-#include "color.h"
+#include "include/hash.h"
+#include "include/color.h"
 
 
 #define COLOR_GREEN "\033[1;32m"

@@ -1,7 +1,7 @@
 
 #define FIRST_HASH 46106600
 #define SECOND_HASH 6999999
-#include "hash.h"
+#include "../include/hash.h"
 
 // simple function to calculate the power of a number
 unsigned long long power(int base, int exp) {

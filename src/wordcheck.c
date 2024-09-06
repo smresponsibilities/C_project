@@ -2,8 +2,8 @@
 #include<string.h>
 #include<stdlib.h>
 #include<ctype.h>
-#include "wordcheck.h"
-#include "hash.h"
+#include "../include/wordcheck.h"
+#include "../include/hash.h"
 // #include "capitalize.h"
 
 

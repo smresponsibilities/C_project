@@ -1,6 +1,6 @@
 
 
 
-gcc -I.. ../hash.c ../randomindex.c ../wordcheck.c testwordcheck.c testhash.c testrandom.c maintest.c -o maintest && ./maintest
+gcc -I.. ../src/hash.c ../src/randomindex.c ../src/wordcheck.c ../src/color.c testcolor.c testwordcheck.c testhash.c testrandom.c maintest.c -o maintest  && ./maintest
 
 

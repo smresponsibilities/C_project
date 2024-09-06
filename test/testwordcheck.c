@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
-#include "wordcheck.h"
+#include "../include/wordcheck.h"
 #include "testwordcheck.h"
 
 

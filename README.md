@@ -10,14 +10,16 @@ I have attempted to replicated the complex ui of it by making the color of the c
 Green for correct index and match, yellow for match but not correct index, red for no form of match.
 
 ## Table of Contents
+
 - [Dependencies](#dependencies)
 - [Building the program](#building-the-program)
 - [Run Locally](#run-locally)
+- [Features](#features)
+- [File Structure](#file-structure)
 - [Running Tests](#running-tests)
 - [Demo](#demo)
 - [Roadmap](#roadmap)
 - [Made by](#by)
-
 
 ## Dependencies
 
@@ -75,6 +77,15 @@ For windows, both commands are individually capable enough to run the program
 - Cross platform
 - Attractive colors
 
+## File Structure
+
+- `wordle.c`: The Main program file that is the entry point to the project
+- `test folder`: The folder that can have the unit tests
+- `README.md`: The README file with project documentation.
+- `include folder`: This contains the header files.
+- `src folder`: This contains actual code of all the modular functions.
+- `wordle.sh`: This contains the neccessary commands to build the program in linux or in windows by git bash.
+
 ## Running Tests
 
 To run tests, go to the test directory on your machine
@@ -97,7 +108,7 @@ gcc -I.. ../hash.c ../randomindex.c ../wordcheck.c testwordcheck.c testhash.c te
 To run the tests on Linux , run the following script
 
 ```bash {"id":"01J6WZC1VX396Z6Z4HH9SMTZEZ"}
-sh test.sh
+test.sh
 ```
 
 ## Demo

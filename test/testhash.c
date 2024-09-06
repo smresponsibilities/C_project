@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include "hash.h"
+#include "../include/hash.h"
 #include <assert.h>
 #include "testhash.h"
 
