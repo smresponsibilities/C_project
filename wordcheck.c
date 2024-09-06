@@ -6,6 +6,8 @@
 #include "hash.h"
 // #include "capitalize.h"
 
+
+// validate that the given string is an alphabet
 int checkAlpha(char *str) {
 
     if (str == NULL || str[0] == '\0') {
@@ -21,6 +23,7 @@ int checkAlpha(char *str) {
 
 }
 
+// simple check to see if the word is correct or invalid or partially correct
 int wordCheck(char *word, char *guess) {
 
     if (((guess) == NULL) || (checkAlpha(guess)==0)  || (strlen(word) != strlen(guess))) {
