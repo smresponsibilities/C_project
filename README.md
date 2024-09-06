@@ -34,7 +34,7 @@ sudo apt-get install gcc
 The below command will make a new executable/equivalent but you should have gcc installed
 
 ```bash {"id":"01J6WZ5475C5VKJF1Y4H4HQVXC"}
-gcc wordle.c color.c randomindex.c wordcheck.c hash.c -o wordle 
+gcc wordle.c src/randomindex.c src/wordcheck.c src/hash.c src/color.c -Iinclude -o wordle -lm
 ```
 
 ## Run Locally
@@ -53,20 +53,20 @@ Go to the project directory
 
 Running the project
 
-For linux (as i have already given a prebuilt file)
+For linux
 
 ```bash {"id":"01J6WZ5476B3T2H75SWH9QRR4R"}
-  ./wordle  
+  chmod +x wordle.sh && ./wordle.sh
 ```
 
-For windows, both commands are individually capable enough to run the program
+For windows, both commands are individually capable enough to make the program first command runs in git bash only
 
 ```bash {"id":"01J727AW1WJVX36T5N5GFD2B1V"}
-.\wordle
+sh wordle.sh
 ```
 
 ```bash {"id":"01J71YET5SHQ310X2ZJ5YMQYH0"}
- wordle.exe
+ wordle.bat
 ```
 
 ## Features
@@ -79,12 +79,13 @@ For windows, both commands are individually capable enough to run the program
 
 ## File Structure
 
-- `wordle.c`: The Main program file that is the entry point to the project
-- `test folder`: The folder that can have the unit tests
+- `wordle.c`: The main program file that is the entry point to the project.
+- `test folder`: The folder that have the unit tests.
 - `README.md`: The README file with project documentation.
 - `include folder`: This contains the header files.
 - `src folder`: This contains actual code of all the modular functions.
-- `wordle.sh`: This contains the neccessary commands to build the program in linux or in windows by git bash.
+- `wordle.sh`: This contains the neccessary commands to build the program in Linux or in Windows by git bash.
+- `wordle.bat`: This contains the neccessary commands to build the program in Windows.
 
 ## Running Tests
 
