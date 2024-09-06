@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-![App Screenshot](image.png)
+![App Screenshot](/images/image.png)
 
 This is a terminal based program atempting to recreate the wordle experience on the terminal.
 About "Wordle". it is a popular word-guessing game where players try to guess a five-letter word by making guesses and receiving feedback on the correctness of their guesses.
@@ -114,7 +114,7 @@ chmod +x wordle.sh && ./wordle.sh
 
 ## Demo
 
-Insert gif or link to demo
+![alt text](/images/GIFMaker_me.gifGIFMaker_me.gif)
 
 ## Roadmap
 

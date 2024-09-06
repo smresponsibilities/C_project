@@ -128,7 +128,7 @@ int main() {
             } 
 
             if (i == 6) {
-                printf("You have unfornately run out of tries. Maybe play again to guess the word.\n", wordToGuess);
+                printf("You have unfornately run out of tries. Maybe play again to guess the word.\n");
                 break;
             }
         }
