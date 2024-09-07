@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](image.png)
 
 This is a terminal based program atempting to recreate the wordle experience on the terminal.
 About "Wordle". it is a popular word-guessing game where players try to guess a five-letter word by making guesses and receiving feedback on the correctness of their guesses.
@@ -109,7 +109,7 @@ gcc -I.. ../hash.c ../randomindex.c ../wordcheck.c testwordcheck.c testhash.c te
 To run the tests on Linux , run the following script
 
 ```bash {"id":"01J6WZC1VX396Z6Z4HH9SMTZEZ"}
-test.sh
+chmod +x wordle.sh && ./wordle.sh
 ```
 
 ## Demo

@@ -24,7 +24,7 @@ void  wordColoring( char *wordToGuess, char *input, char colors[]) {
 
     for (int i = 0; i < len; i++) {
         if (input[i] == wordToGuess[i]) {
-            colors[i] = 'G'; // Green for correct position
+            colors[i] = 'G';
             letterCount[input[i] - 'A']--;
         } else {
             colors[i] = ' ';
@@ -35,10 +35,10 @@ void  wordColoring( char *wordToGuess, char *input, char colors[]) {
     for (int i = 0; i < len; i++) {
         if (colors[i] != 'G') {
             if (letterCount[input[i] - 'A'] > 0) {
-                colors[i] = 'Y'; // Yellow for correct letter, wrong position
+                colors[i] = 'Y'; 
                 letterCount[input[i] - 'A']--;
             } else {
-                colors[i] = 'R'; // Red for incorrect letter
+                colors[i] = 'R'; 
             }
         }
     }
@@ -66,7 +66,7 @@ void updateAtozcolors( char *guess, char *colors, char alphabetColors[]) {
         } else if (colors[i] == 'Y' && alphabetColors[index] != 'G') {
             alphabetColors[index] = 'Y';
         } else if (colors[i] == 'R' && alphabetColors[index] != 'G' && alphabetColors[index] != 'Y') {
-            alphabetColors[index] = 'R'; // Red for incorrect letter
+            alphabetColors[index] = 'R';
         }
     }
 }
